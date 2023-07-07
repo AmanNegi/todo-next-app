@@ -29,6 +29,5 @@ npm run dev
 
 ## Screenshots 💻
 
-| Home Page | Detail Page |
-| :-------: | :---------: |
-| ![](./screenshots/1.png) | ![](./screenshots/2.png) | 
+![](./screenshots/1.png) 
+![](./screenshots/2.png)  
