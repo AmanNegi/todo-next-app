@@ -42,8 +42,9 @@ npm run dev
    ├── _components/   # Non-Routable (contains components)
    ├── _models/   # Non-Routable (contains object models)
    ├── _utils/   # Non-Routable (contains DB utils)
-   ├── api/   # Contains API Handlers
-    ├── [id]/   # Dynamic API Handler for `/api/[id]`
+   ├── api/todo   # Contains API Handlers
+    ├── [id]/route.tsx   # Dynamic API Handler for `/api/todo/[id]`
+    ├── route.tsx   # API Handler for `/api/todo`
    ├── page.tsx # Routable (Todo Home Page)
    ├── todo/[id]/page.tsx # Routable (Dynamic [id], Todo Detail Page)
    └── layout.tsx # Root Layout (used across complete application)
