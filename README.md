@@ -1,13 +1,15 @@
 # Todo-Demo-App ✅
-> Build using NextJS and PocketbaseDB
+> Build using NextJS-13 and PocketbaseDB
 
 ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-This project is built as a learning step towards becoming the perfect NextJS Developer. Feel free to checkout the source code and learn the core essential basics of NextJS. If you are a beginner, this repository will answer a lot of your questions. 
+This project is built as a learning step towards becoming the perfect NextJS Developer. Feel free to checkout the source code and learn the core essential basics of NextJS.
 
-If you feel the codebase could be improved. Feel free to contribute in the codebase while learning new things. 
+- If you are a beginner, this repository will answer a lot of your questions. 
+
+- If you feel the codebase could be improved. Feel free to contribute in the codebase while learning new things. 
 
 
 ## Concepts Included 🐱‍🚀
@@ -50,7 +52,7 @@ npm run dev
 ## Resources 📂
 - Repo: [My NextJS Notes](https://github.com/AmanNegi/Notes/blob/main/NextJs/README.md)
 - Blog: [Routes in new App Router](https://www.builder.io/blog/next-13-app-router)
-- Repo: Want [another perfect codebase? (not mine 🙈)](https://github.com/sadmann7/skateshop)
+- Repo: Want [another perfect codebase](https://github.com/sadmann7/skateshop)? not mine 🙈
 ## Screenshots 💻
 
 ![](./screenshots/1.png) 
