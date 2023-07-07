@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { AiOutlineDelete } from "react-icons/ai";
 import Todo from "../models/todo";

@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Todo from "../models/todo";
 
@@ -8,13 +6,15 @@ const CheckBox = (todo: Todo) => {
   return (
     <input
       onChange={(e) => {
+        e.stopPropagation();
+        e.nativeEvent.stopImmediatePropagation();
         updateCheckStatus(todo.id);
       }}
       checked={completed}
       type="checkbox"
       name="complete"
       id="complete"
-      className="w-5 mr-2 appearance-none bg-emerald-100 focus:border-emerald-500 text-emerald-500 rounded-full h-[20px]"
+      className="z-20 w-5 mr-2 appearance-none bg-emerald-100 focus:border-emerald-500 text-emerald-500 rounded-full h-[20px]"
     />
   );
 

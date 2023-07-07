@@ -1,7 +1,6 @@
 import React from "react";
 import Todo from "../models/todo";
-import CheckBox from "./checkbox";
-import DeleteIcon from "./deleteIcon";
+import Item from "./item";
 
 const List = async () => {
   const list: Todo[] = await getData();
@@ -9,19 +8,10 @@ const List = async () => {
   return (
     <div>
       <h1 className="text-4xl text-emerald-800 font-bold mb-4">{"To-do's"}</h1>
-      {list.length <= 0 && <p >No todos</p>}
+      {list.length <= 0 && <p>No todos</p>}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {list.map((todo) => {
-          return (
-            <div
-              className="group border-2 border-emerald-800 border-opacity-50  text-white p-4 text-center flex flex-row min-h-[8vh] rounded-md"
-              key={todo.id}
-            >
-              <CheckBox {...todo} />
-              <h1 className="text-left text-black">{todo.name}</h1>
-              <DeleteIcon {...todo} />
-            </div>
-          );
+          return <Item key={todo.id} {...todo} />;
         })}
       </div>
     </div>

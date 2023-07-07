@@ -1,5 +1,19 @@
-import { deleteTodoById } from "@/app/utils/db";
+import { deleteTodoById, getTodoById } from "@/app/utils/db";
 import { NextRequest, NextResponse } from "next/server";
+
+export async function GET(
+  req: NextRequest,
+  { params }: { params: { id: string } }
+) {
+  try {
+    var res = await getTodoById(params.id);
+    return new NextResponse(JSON.stringify(res), { status: 200 });
+  } catch (e) {
+    return new NextResponse(JSON.stringify({ error: e }), {
+      status: 400,
+    });
+  }
+}
 
 export async function DELETE(
   req: NextRequest,

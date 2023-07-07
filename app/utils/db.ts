@@ -1,8 +1,8 @@
 import PocketBase from "pocketbase";
 import Todo from "../models/todo";
 
-// Connect with remote pocketbase instance
-export const pb = new PocketBase("https://todo-next-app.pockethost.io");
+// Connect with your local pocketbase instance
+export const pb = new PocketBase("http://127.0.0.1:8090");
 
 export async function getAllTodos(page = 1): Promise<Todo[]> {
   const data = await pb.collection("todos").getList(page, 20, {
@@ -48,7 +48,7 @@ export async function markToDoAsDone(id: string) {
   if (!item) {
     return new Error("Todo with this ID not found");
   }
-  
+
   // Set the completed status to opposite
   var res = await pb
     .collection("todos")
@@ -58,5 +58,9 @@ export async function markToDoAsDone(id: string) {
 
 export async function deleteTodoById(id: string) {
   var res = await pb.collection("todos").delete(id);
+  return res;
+}
+export async function getTodoById(id: string) {
+  var res = await pb.collection("todos").getOne(id);
   return res;
 }
