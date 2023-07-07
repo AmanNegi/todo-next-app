@@ -1,13 +1,13 @@
 "use client";
 
 import React from "react";
+import { useRouter } from "next/navigation";
 
 // Because this page is client side
 // all below imports are automatically client components
-import Todo from "../models/todo";
+import Todo from "../_models/todo";
 import CheckBox from "./checkbox";
 import DeleteIcon from "./deleteIcon";
-import { useRouter } from "next/navigation";
 
 const Item = (todo: Todo) => {
   const { push } = useRouter();
@@ -15,6 +15,8 @@ const Item = (todo: Todo) => {
   return (
     <div
       onClick={(e) => {
+        // Only push if the user clicks on the div
+        // as opposed to the checkbox or delete icon
         if ((e.target as HTMLInputElement).tagName.toLowerCase() !== "input") {
           push(`/todo/${todo.id}`);
         }

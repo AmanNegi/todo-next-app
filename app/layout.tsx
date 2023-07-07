@@ -1,6 +1,6 @@
 import Image from "next/image";
-import "./globals.css";
 import { Inter } from "next/font/google";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +20,6 @@ export default function RootLayout({
         {children}
         <div className="absolute bottom-2 right-2">
           <Image src="/icon.png" alt="logo" width={50} height={50} />
-          {/* <img src="./icon.png" alt="" /> */}
         </div>
       </body>
     </html>

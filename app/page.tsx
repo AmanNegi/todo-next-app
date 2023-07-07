@@ -1,6 +1,6 @@
 import React from "react";
-import Form from "./components/form";
-import List from "./components/list";
+import Form from "./_components/form";
+import List from "./_components/list";
 
 const EntryPoint = () => {
   return (

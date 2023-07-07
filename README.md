@@ -25,14 +25,31 @@ If you feel the codebase could be improved. Feel free to contribute in the codeb
 ```shell
 # Start the pocketbase DB
 pocketbase serve
+
+# Install all the dependencies
+npm install
+
 # Open another terminal to start Next App
 npm run dev
 ```
 
+## Folder Structure 🦴
+```
+...
+ ├──app/
+   ├── _components/   # Non-Routable (contains components)
+   ├── _models/   # Non-Routable (contains object models)
+   ├── _utils/   # Non-Routable (contains DB utils)
+   ├── api/   # Contains API Handlers
+    ├── [id]/   # Dynamic API Handler for `/api/[id]`
+   ├── page.tsx # Routable (Todo Home Page)
+   ├── todo/[id]/page.tsx # Routable (Dynamic [id], Todo Detail Page)
+   └── layout.tsx # Root Layout (used across complete application)
+```
 
 ## Resources 📂
 - Repo: [My NextJS Notes](https://github.com/AmanNegi/Notes/blob/main/NextJs/README.md)
-- [Blog: Routes in new App Router](https://www.builder.io/blog/next-13-app-router)
+- Blog: [Routes in new App Router](https://www.builder.io/blog/next-13-app-router)
 - Repo: Want [another perfect codebase? (not mine 🙈)](https://github.com/sadmann7/skateshop)
 ## Screenshots 💻
 

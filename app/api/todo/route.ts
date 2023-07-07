@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getAllTodos, addTodo, markToDoAsDone } from "@/app/utils/db";
+import { getAllTodos, addTodo, markToDoAsDone } from "@/app/_utils/db";
 import { ZodError, z } from "zod";
 
 // (GET) localhost:3000/api/todo

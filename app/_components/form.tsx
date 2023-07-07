@@ -31,9 +31,13 @@ const Form = () => {
   );
 
   async function handleOnSubmit(e: React.FormEvent<HTMLFormElement>) {
+    // Prevents the page from reloading
     e.preventDefault();
 
+    // Make the text input empty
     setName("");
+
+    // Send the data to the server
     await fetch("http://localhost:3000/api/todo", {
       method: "POST",
       body: JSON.stringify({ name: name }),
@@ -42,6 +46,7 @@ const Form = () => {
       },
     });
 
+    // Refresh the page, so the new todo is displayed
     router.refresh();
   }
 };

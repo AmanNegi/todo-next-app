@@ -1,9 +1,13 @@
-import { deleteTodoById, getTodoById } from "@/app/utils/db";
+import { deleteTodoById, getTodoById } from "@/app/_utils/db";
 import { NextRequest, NextResponse } from "next/server";
 
+// [id] is a dynamic route
+// https://nextjs.org/docs/routing/dynamic-routes
+
+// GET /api/todo/[id]
 export async function GET(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: { id: string } } // explicitly define the type of params
 ) {
   try {
     var res = await getTodoById(params.id);
@@ -15,6 +19,7 @@ export async function GET(
   }
 }
 
+// DELETE /api/todo/[id]
 export async function DELETE(
   req: NextRequest,
   { params }: { params: { id: string } } // explicitly define the type of params

@@ -1,5 +1,5 @@
 import React from "react";
-import Todo from "../models/todo";
+import Todo from "../_models/todo";
 import Item from "./item";
 
 const List = async () => {

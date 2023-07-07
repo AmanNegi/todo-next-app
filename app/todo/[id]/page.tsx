@@ -1,4 +1,4 @@
-import Todo from "@/app/models/todo";
+import Todo from "@/app/_models/todo";
 import Link from "next/link";
 import React from "react";
 import { BiArrowBack } from "react-icons/bi";

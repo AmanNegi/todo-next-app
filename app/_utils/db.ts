@@ -1,5 +1,5 @@
 import PocketBase from "pocketbase";
-import Todo from "../models/todo";
+import Todo from "../_models/todo";
 
 // Connect with your local pocketbase instance
 export const pb = new PocketBase("http://127.0.0.1:8090");

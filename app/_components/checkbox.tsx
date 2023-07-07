@@ -1,13 +1,11 @@
 import React from "react";
-import Todo from "../models/todo";
+import Todo from "../_models/todo";
 
 const CheckBox = (todo: Todo) => {
   const [completed, setCompleted] = React.useState(todo.completed);
   return (
     <input
       onChange={(e) => {
-        e.stopPropagation();
-        e.nativeEvent.stopImmediatePropagation();
         updateCheckStatus(todo.id);
       }}
       checked={completed}
@@ -24,7 +22,7 @@ const CheckBox = (todo: Todo) => {
       body: JSON.stringify({ id }),
     });
 
-    // Update Local State
+    // Update Local State in this component
     setCompleted(!completed);
   }
 };

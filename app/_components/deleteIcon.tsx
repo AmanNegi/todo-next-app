@@ -1,6 +1,6 @@
 import React from "react";
 import { AiOutlineDelete } from "react-icons/ai";
-import Todo from "../models/todo";
+import Todo from "../_models/todo";
 import { useRouter } from "next/navigation";
 
 const DeleteIcon = (todo: Todo) => {
